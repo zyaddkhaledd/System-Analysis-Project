@@ -25,7 +25,7 @@ body {
 .back-btn {
     display: inline-block;
     margin-bottom: 20px;
-    padding: 10px 10px;
+    padding: 10px 1px;
     background: #2f0909;
     color: #fff;
     text-decoration: none;
