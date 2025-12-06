@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+
+   <div class="container">
+
+    <div class="section">
+        <h2>Shipping Address</h2>
+
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" placeholder="First & Last Name">
+        </div>
+
+        <div class="form-group">
+            <label>Address 1</label>
+            <input type="text" placeholder="Street name, building...">
+        </div>
+
+        <div class="form-group">
+            <label>Address 2</label>
+            <input type="text" placeholder="Apartment, suite, etc.">
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label>City</label>
+                <input type="text" placeholder="City">
+            </div>
+
+            <div class="form-group">
+                <label>State</label>
+                <select>
+                    <option>Select state</option>
+                    <option>Cairo</option>
+                    <option>Giza</option>
+                    <option>Alexandria</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="section">
+        <h2>Payment Method</h2>
+
+        <div class="payment-options">
+            <button class="payment-btn active" onclick="showCard()">Card</button>
+            <button class="payment-btn" onclick="showCash()">Cash</button>
+        </div>
+
+       
+        <div id="card-section">
+            <div class="form-group">
+                <label>Name on Card</label>
+                <input type="text" placeholder="First & Last Name">
+            </div>
+
+            <div class="form-group">
+                <label>Card Number</label>
+                <input type="text" placeholder="0000 0000 0000 0000">
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label>Expiry Month</label>
+                    <select>
+                        <option>MM</option>
+                        <option>01</option><option>02</option><option>03</option>
+                        <option>04</option><option>05</option><option>06</option>
+                        <option>07</option><option>08</option><option>09</option>
+                        <option>10</option><option>11</option><option>12</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Expiry Year</label>
+                    <select>
+                        <option>YYYY</option>
+                        <option>2025</option><option>2026</option><option>2027</option>
+                        <option>2028</option><option>2029</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>CVV</label>
+                    <input type="text" placeholder="123">
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="cash-section" style="display:none;">
+            <p class="cash-msg">You will pay *Cash on Delivery*.</p>
+        </div>
+
+    </div>
+
+    
+    <div class="summary">
+        <h2>Order Summary</h2>
+
+        <div class="product">
+            <img src="https://via.placeholder.com/60" alt="">
+            <div>
+                <h4>Book Title</h4>
+                <p>High quality educational book.</p>
+            </div>
+        </div>
+
+        <div class="price-row">
+            <span>Subtotal</span>
+            <span>$40.00</span>
+        </div>
+        <div class="price-row">
+            <span>Shipping</span>
+            <span>$5.00</span>
+        </div>
+        <div class="price-row">
+            <span>Tax</span>
+            <span>$3.20</span>
+        </div>
+
+        <div class="total-row">
+            <span>Total</span>
+            <span>$48.20</span>
+        </div>
+
+        <button class="order-btn">Place Order</button>
+    </div>
+
+</div>
+
+
+<script>
+function showCard() {
+    document.getElementById("card-section").style.display = "block";
+    document.getElementById("cash-section").style.display = "none";
+
+    document.querySelectorAll(".payment-btn")[0].classList.add("active");
+    document.querySelectorAll(".payment-btn")[1].classList.remove("active");
+}
+
+function showCash() {
+    document.getElementById("card-section").style.display = "none";
+    document.getElementById("cash-section").style.display = "block";
+
+    document.querySelectorAll(".payment-btn")[1].classList.add("active");
+    document.querySelectorAll(".payment-btn")[0].classList.remove("active");
+}
+</script>
+
+</body>
+</html>
