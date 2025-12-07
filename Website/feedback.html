@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback</title>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background: url(Photos/henry-be-lc7xcWebECc-unsplash.jpg) no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .feedback-box {
+        width: 400px;
+        padding: 30px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+        color: white;
+        animation: fadeIn 0.6s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        text-align: center;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+        margin-bottom: 25px;
+        font-size: 30px;
+        font-weight: 600;
+        color: #fff;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    }
+
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    label {
+        font-weight: 600;
+        margin-top: 12px;
+        align-self: flex-start; 
+    }
+
+    input, textarea {
+        width: 90%;
+        padding: 12px 15px;
+        margin-top: 6px;
+        border-radius: 12px;
+        border: none;
+        font-size: 15px;
+        background: rgba(255, 255, 255, 0.85);
+        transition: 0.3s;
+    }
+
+    input:focus, textarea:focus {
+        outline: none;
+        box-shadow: 0 0 8px #3a547c;
+    }
+
+    button {
+        width: 50%;
+        min-width: 150px;
+        padding: 14px;
+        margin-top: 25px;
+        background: #3a547c;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        font-size: 17px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #2b3d5a;
+        transform: translateY(-2px);
+    }
+
+    #confirmation {
+        display: none;
+        margin-top: 20px;
+        padding: 12px;
+        background: rgba(0,255,0,0.25);
+        color: #00ff96;
+        border: 1px solid #00ff96;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 16px;
+        width: 90%;
+        text-align: center;
+        animation: pop 0.4s ease;
+    }
+
+    @keyframes pop {
+        from { transform: scale(0.8); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+
+    @media (max-width: 480px) {
+        .feedback-box {
+            width: 90%;
+            padding: 25px 20px;
+        }
+        button {
+            width: 70%;
+        }
+        input, textarea {
+            width: 95%;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="feedback-box">
+    <h2>Feedback</h2>
+
+    <form id="feedbackForm">
+
+        <label>Your Name</label>
+        <input type="text" required>
+
+        <label>Your Email</label>
+        <input type="email" required>
+
+        <label>Your Phone Number</label>
+        <input type="tel" required>
+
+        <label>Your Feedback</label>
+        <textarea rows="4" required></textarea>
+
+        <button type="submit">Send Feedback</button>
+    </form>
+
+    <div id="confirmation">Feedback confirmed ✔️</div>
+</div>
+
+<script>
+    const form = document.getElementById("feedbackForm");
+    const confirmation = document.getElementById("confirmation");
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        confirmation.style.display = "block";
+
+        form.reset();
+
+        setTimeout(() => {
+            window.location.href = "home.html";
+        }, 2000);
+    });
+</script>
+
+</body>
+</html>

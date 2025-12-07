@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="home.html" class="logo">Elmaktaba</a>
+    <div class="nav-links">
+        <a href="shop.html">Shop</a>
+        <a href="home.html">Home</a>
+        <a href="cart.html" class="cart-link">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count">0</span>
+        </a>
+    </div>
+</div>
+
+<h1 class="title">Your Cart</h1>
+
+<div class="cart-container" id="cart-container">
+</div>
+
+<h2 class="total">Total: $<span id="total">0</span></h2>
+<a href="payment.html" class="checkout-btn">Proceed to Checkout</a>
+
+<script src="cart.js"></script>
+</body>
+</html>

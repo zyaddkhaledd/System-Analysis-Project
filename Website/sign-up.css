@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    height: 90vh;
+    background-image: url(Photos/zaini-izzuddin-55btQzyDiO8-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+*{
+    text-decoration: none;
+}
+.home {
+    top: 0;
+    left: 0;
+    margin-left: 20px;
+    margin-top: 20px;
+    display: flex;
+    backdrop-filter:blur(20px);
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+}
+.home a {
+    text-decoration: none;
+    display: flex;
+    color: white;
+}
+.home:hover a {
+    color: black;
+}
+/* .navbar { 
+    height: 100px;
+    background-color:#5D3A1A;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    color: white;}*/
+
+form {
+    height: 400px;
+    width: 250px;
+    border-radius: 20px;
+    padding: 20px;
+    border: 2px beige solid; 
+    backdrop-filter:blur(20px);
+    background: transparent;
+}
+.box {
+    height: 39.6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form h2 {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    margin-block: 8px;
+}
+.inner-box {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.inner-box button {
+    width: 50%;
+    margin: auto;
+    /* background-color: #C19A6B; */
+    backdrop-filter:blur(20px);
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+}
+.signup-link {
+    margin-top: 30px;
+    color: white;
+}
+.signup-link a {
+    font-weight: bold;
+    color: white;
+}
+input {
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+button a{
+    color: white;
+}
+button:hover {
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
+button:hover a{
+    color: black;
+}

@@ -1,0 +1,150 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #3a547c;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.row .form-group {
+    flex: 1;
+}
+
+.payment-options {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.payment-btn {
+    flex: 1;
+    padding: 10px 0;
+    border: 2px solid #3a547c;
+    border-radius: 6px;
+    background: white;
+    color: #3a547c;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.payment-btn.active,
+.payment-btn:hover {
+    background: #3a547c;
+    color: white;
+}
+
+#cash-section {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.summary h2 {
+    margin-bottom: 20px;
+}
+
+#cart-items .product {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    background: #fafafa;
+    padding: 10px;
+    border-radius: 6px;
+    align-items: center;
+}
+
+#cart-items .product img {
+    width: 70px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.price-row, .total-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+.total-row {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.order-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: #3a547c;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.order-btn:hover {
+    background: #000;
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    #cart-items .product {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #cart-items .product img {
+        width: 100%;
+        height: auto;
+    }
+}
